@@ -1,19 +1,7 @@
-import React, {useState, useEffect} from 'react'
-import {tasks as data} from './task.js'
-
-
-function TaskList() {
-
-    const [tasks, setTasks] = useState([])
-
-    useEffect(() => {
-        setTasks(data)
-    }, [])
+function TaskList({tasks}) {
 
     if (tasks.length === 0) {
-        return (
-            <h1>No hay tareas</h1>
-        )
+        return <h1>No hay tareas</h1>
     }
 
   return (
@@ -23,8 +11,7 @@ function TaskList() {
             <h1>{task.title}</h1>
             <p>{task.description}</p>
           </div>
-        ))
-        }
+        ))}
     </div>
   )
 }
