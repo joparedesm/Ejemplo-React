@@ -1,10 +1,12 @@
-function TaskContext({ children }) {
+import {createContext} from 'react'
+
+export const TaskContext = createContext()
+
+export function TaskContextProvider(props) {
+  let x = 20
   return (
-    <>
-    <h1>Componente Context</h1>
-    {children}
-    </>
+   <TaskContext.Provider value={x}>
+    {props.children}
+   </TaskContext.Provider>
   )
 }
-
-export default TaskContext

@@ -1,9 +1,5 @@
-import TaskContext from "../context/TaskContext";
-
 function TaskCard({task, deleteTask}) {
-
   return (
-    <TaskContext>
       <div>
         <h1>{task.title}</h1>
         <p>{task.description}</p>
@@ -11,7 +7,6 @@ function TaskCard({task, deleteTask}) {
           Eliminar
         </button>
       </div>
-    </TaskContext>
   );
 }
 
